@@ -1,0 +1,1428 @@
+/* ========== LANDING PAGE STYLES ========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+.landing-page { 
+    display: block; 
+}
+
+.landing-page.hidden { 
+    display: none; 
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    z-index: 1000;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav ul { 
+    list-style: none; 
+    display: flex; 
+    gap: 25px;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover { 
+    color: #1e90ff; 
+}
+
+.btn-signin {
+    border: 2px solid #1e90ff; 
+    border-radius: 20px;
+    padding: 8px 20px; 
+    color: #ffffff; 
+    background: #dc3545;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-signin:hover { 
+    background: #c82333;
+    border-color: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Section umum */
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+
+/* Landing Page - Home Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://www.polibatam.ac.id/wp-content/uploads/2023/05/Gedung.jpg') no-repeat center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px 80px;
+}
+
+.home-content {
+    max-width: 900px;
+    padding: 20px;
+}
+
+#home h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.tagline {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.subtext {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+.btn-main {
+    padding: 14px 36px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    background: #1e90ff;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-main:hover {
+    background: #0d6efd;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(30, 144, 255, 0.4);
+}
+
+.btn-main:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* ========== FEATURES SECTION ========== */
+#features {
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://cdio2025arm.polibatam.ac.id/wp-content/uploads/2025/02/Techno-1-2048x1365.jpg') no-repeat center/cover;
+    padding: 150px 60px 100px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    margin-bottom: 60px;
+    letter-spacing: 0.5px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.features-box {
+    background: white;
+    border-radius: 20px;
+    padding: 50px 60px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    color: black;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+
+.features-text {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.features-text h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    color: #1a1a1a;
+}
+
+.features-text p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.features-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-content: start;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, #e3f2fd 0%, #f0f8ff 100%);
+    padding: 30px 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(30, 144, 255, 0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(30, 144, 255, 0.2);
+    border-color: rgba(30, 144, 255, 0.3);
+}
+
+.feature-card .icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.feature-card .icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+}
+
+.feature-card p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.feature-link {
+    color: #1e90ff;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.feature-link:hover {
+    text-decoration: underline;
+}
+
+/* About Section */
+#about {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://www.polibatam.ac.id/wp-content/uploads/2022/02/MG_8950-scaled.jpg') no-repeat center/cover;
+    color: white;
+    gap: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#about img { 
+    width: 400px; 
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+#about .text { 
+    max-width: 500px;
+    text-align: left;
+}
+
+#about .text h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+#about .text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#about button {
+    margin-top: 20px; 
+    padding: 12px 30px;
+    background: #1e90ff; 
+    border: none; 
+    color: white; 
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#about button:hover {
+    background: #0d6efd;
+    transform: translateY(-2px);
+}
+
+/* Contact Section */
+#contact {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://www.polibatam.ac.id/wp-content/uploads/2024/10/Ruang-PPID-3-1024x683.jpg') no-repeat center/cover;
+    flex-direction: column;
+    padding: 80px 60px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contact-form {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    min-width: 300px;
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-form .subtext {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #1e90ff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #0d6efd;
+}
+
+.contact-info {
+    flex: 1;
+    background: #1a1a1a;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 300px;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #1e90ff;
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul { 
+    list-style: none; 
+    display: flex; 
+    gap: 20px;
+    margin: 0;
+}
+
+footer a { 
+    color: white; 
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    nav {
+        padding: 15px 30px;
+    }
+    
+    section {
+        padding: 60px 30px;
+    }
+    
+    #features {
+        padding: 120px 30px 80px;
+    }
+    
+    .features-title {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .features-box {
+        padding: 40px 30px;
+        gap: 35px;
+    }
+}
+
+/* Tablet kecil (768px ke bawah) */
+@media (max-width: 768px) {
+    nav {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    nav ul {
+        display: none;
+    }
+    
+    .btn-signin {
+        padding: 6px 16px;
+        font-size: 14px;
+    }
+    
+    section {
+        padding: 60px 20px;
+        min-height: auto;
+    }
+    
+    #home {
+        padding: 100px 20px 60px;
+    }
+    
+    #home h1 {
+        font-size: 36px;
+    }
+    
+    .tagline {
+        font-size: 18px;
+    }
+    
+    .subtext {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    
+    #features {
+        padding: 100px 20px 60px;
+    }
+    
+    .features-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+    
+    .features-box {
+        flex-direction: column;
+        padding: 35px 25px;
+        gap: 30px;
+    }
+    
+    .features-text {
+        text-align: center;
+    }
+    
+    .features-text h2 {
+        font-size: 28px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    
+    .feature-card {
+        padding: 25px 20px;
+    }
+    
+    .feature-card .icon img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    #about {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    #about img {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    #about .text {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    #about .text h2 {
+        font-size: 32px;
+    }
+    
+    #contact {
+        padding: 60px 20px;
+    }
+    
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .contact-form,
+    .contact-info {
+        padding: 30px 25px;
+        min-width: auto;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Mobile (480px ke bawah) */
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 15px;
+    }
+    
+    .logo {
+        font-size: 18px;
+    }
+    
+    .btn-signin {
+        padding: 5px 12px;
+        font-size: 13px;
+    }
+    
+    #home {
+        padding: 90px 15px 50px;
+    }
+    
+    #home h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .tagline {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .subtext {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    
+    .btn-main {
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+    
+    #features {
+        padding: 90px 15px 50px;
+    }
+    
+    .features-title {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    
+    .features-box {
+        padding: 30px 20px;
+    }
+    
+    .features-text h2 {
+        font-size: 24px;
+    }
+    
+    .features-text p {
+        font-size: 15px;
+    }
+    
+    .feature-card {
+        padding: 22px 18px;
+    }
+    
+    .feature-card .icon img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .feature-card h3 {
+        font-size: 16px;
+    }
+    
+    #about {
+        padding: 50px 15px;
+    }
+    
+    #about .text h2 {
+        font-size: 26px;
+    }
+    
+    #about .text p {
+        font-size: 14px;
+    }
+    
+    #about button {
+        width: 100%;
+        padding: 12px;
+    }
+    
+    #contact {
+        padding: 50px 15px;
+    }
+    
+    .contact-form h2 {
+        font-size: 24px;
+    }
+    
+    .contact-form .subtext {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-form,
+    .contact-info {
+        padding: 25px 20px;
+    }
+    
+    .contact-info h3 {
+        font-size: 20px;
+    }
+    
+    .contact-info p {
+        font-size: 14px;
+    }
+    
+    .social-icons img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    footer {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Touch-friendly buttons untuk mobile */
+@media (max-width: 768px) {
+    button,
+    .btn-main,
+    .btn-signin,
+    a,
+    input[type="submit"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Landscape mode untuk mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    #home {
+        min-height: auto;
+        padding: 80px 20px 40px;
+    }
+    
+    #features {
+        min-height: auto;
+    }
+    
+    #about {
+        min-height: auto;
+    }
+}
+
+
+/* ========== BUBBLE CHAT WIDGET STYLES ========== */
+
+/* Widget Button (Bubble) */
+.polcabot-bubble {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, #1e90ff 0%, #0d6efd 100%);
+    border-radius: 50%;
+    box-shadow: 0 6px 24px rgba(30, 144, 255, 0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.polcabot-bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 32px rgba(30, 144, 255, 0.6);
+}
+
+.polcabot-bubble svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 6px 24px rgba(30, 144, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 6px 32px rgba(30, 144, 255, 0.7);
+    }
+}
+
+/* Notification Badge */
+.polcabot-bubble .notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #dc3545;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid white;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-8px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+}
+
+/* Chat Window */
+.polcabot-widget {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    width: 400px;
+    max-width: calc(100vw - 60px);
+    height: 650px;
+    max-height: calc(100vh - 160px);
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9998;
+    animation: slideUp 0.3s ease-out;
+}
+
+.polcabot-widget.active {
+    display: flex;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Widget Header */
+.polcabot-header {
+    background: linear-gradient(135deg, #1e90ff 0%, #0d6efd 100%);
+    color: white;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.polcabot-header-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.polcabot-header-avatar {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.polcabot-header-text h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+.polcabot-header-status {
+    font-size: 13px;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #4ade80;
+    border-radius: 50%;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.polcabot-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.polcabot-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+/* Messages Area */
+.polcabot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.polcabot-message {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 10px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.polcabot-message.user {
+    flex-direction: row-reverse;
+}
+
+.message-avatar {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #1e90ff 0%, #0d6efd 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.polcabot-message.user .message-avatar {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+.message-content {
+    max-width: 75%;
+    padding: 14px 18px;
+    border-radius: 18px;
+    font-size: 15px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.polcabot-message.bot .message-content {
+    background: white;
+    border: 1px solid #e5e7eb;
+    color: #1f2937;
+    border-bottom-left-radius: 4px;
+}
+
+.polcabot-message.user .message-content {
+    background: linear-gradient(135deg, #1e90ff 0%, #0d6efd 100%);
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 18px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    border-bottom-left-radius: 4px;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1e90ff;
+    animation: typing 1.4s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    30% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+/* Welcome Message */
+.welcome-message {
+    background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+    border: 1px solid #bae6fd;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.welcome-message h4 {
+    color: #0369a1;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.welcome-message p {
+    color: #075985;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Quick Actions */
+.quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.quick-action-btn {
+    background: white;
+    border: 1px solid #1e90ff;
+    color: #1e90ff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+}
+
+.quick-action-btn:hover {
+    background: #1e90ff;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Input Area */
+.polcabot-input-area {
+    padding: 20px;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+}
+
+.mode-switch {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+.mode-switch:hover {
+    color: #1e90ff;
+}
+
+.input-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.polcabot-input {
+    flex: 1;
+    padding: 14px 18px;
+    border: 2px solid #e5e7eb;
+    border-radius: 24px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+    resize: none;
+    max-height: 120px;
+    font-family: inherit;
+}
+
+.polcabot-input:focus {
+    border-color: #1e90ff;
+    box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.1);
+}
+
+.send-button {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #1e90ff 0%, #0d6efd 100%);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.send-button:hover:not(:disabled) {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
+}
+
+.send-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.send-button svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+
+/* Admin Panel */
+.admin-panel {
+    background: linear-gradient(to bottom, #fef3c7 0%, #fde68a 100%);
+    border-top: 3px solid #fbbf24;
+    padding: 20px;
+    display: none;
+}
+
+.admin-panel.active {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 500px;
+    }
+}
+
+.admin-panel h4 {
+    font-size: 15px;
+    margin-bottom: 16px;
+    color: #92400e;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-panel input,
+.admin-panel textarea,
+.admin-panel select {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.admin-panel textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.admin-submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.admin-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Powered By */
+.powered-by {
+    text-align: center;
+    padding: 12px;
+    background: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.powered-by a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.powered-by a:hover {
+    text-decoration: underline;
+}
+
+/* Widget Responsive */
+@media (max-width: 768px) {
+    .polcabot-bubble {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .polcabot-bubble svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .polcabot-widget {
+        width: calc(100vw - 40px);
+        height: calc(100vh - 140px);
+        bottom: 90px;
+        right: 20px;
+    }
+
+    .polcabot-header {
+        padding: 16px 20px;
+    }
+
+    .polcabot-header-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .polcabot-header-text h3 {
+        font-size: 16px;
+    }
+
+    .polcabot-header-status {
+        font-size: 12px;
+    }
+
+    .polcabot-messages {
+        padding: 16px;
+    }
+
+    .message-content {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    .polcabot-input-area {
+        padding: 16px;
+    }
+
+    .send-button {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 480px) {
+    .polcabot-widget {
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+    }
+
+    .quick-actions {
+        flex-direction: column;
+    }
+
+    .quick-action-btn {
+        width: 100%;
+    }
+}
+
+/* Scrollbar */
+.polcabot-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.polcabot-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.polcabot-messages::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.polcabot-messages::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Tambahkan di akhir public/css/landing.css */
+
+/* Verification Overlay */
+.verification-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: 30px;
+}
+
+.verification-overlay.active {
+    display: flex;
+}
+
+/* ... (copy semua CSS verification dari artifact) ... */
+
+/* Mode Tabs */
+.mode-tabs {
+    display: flex;
+    background: #f3f4f6;
+    border-radius: 8px;
+    padding: 4px;
+    margin: 16px 20px;
+}
+
+/* ... (copy semua CSS mode-tabs dari artifact) ... */
